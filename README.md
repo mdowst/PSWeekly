@@ -16,4 +16,4 @@ Install-Module PSWeekly
 | [Get-PSWeeklyCreator](docs/Get-PSWeeklyCreator.md) | {{ Fill in the Synopsis }} |
 | [Search-PSWeeklyLink](docs/Search-PSWeeklyLink.md) | Searches for PSWeekly links based on specified criteria. |
 
-![alt text](docs\resources\image.png)
+![alt text](docs/media/image.png)
