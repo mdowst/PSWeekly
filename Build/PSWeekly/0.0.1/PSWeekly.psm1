@@ -417,27 +417,6 @@ function Get-PSWeekly {
     }
 }
 #EndRegion '.\Public\Get-PSWeekly.ps1' 33
-#Region '.\Public\Get-PSWeeklyCreator.ps1' -1
-
-Function Get-PSWeeklyCreator {
-    [CmdletBinding()]
-    [OutputType()]
-    param(
-        [Parameter(Mandatory = $true)]
-        [string]$ModuleName,
-        [Parameter(Mandatory = $true)]
-        [string]$ModuleVersion,
-        [Parameter(Mandatory = $true)]
-        [string]$Author,
-        [Parameter(Mandatory = $true)]
-        [string]$PSVersion,
-        [Parameter(Mandatory = $false)]
-        [string[]]$Functions
-    )
-    
-    New-ModuleTemplate -ModuleName $ModuleName -ModuleVersion $ModuleVersion -Author $Author -PSVersion $PSVersion -Functions $Functions
-}
-#EndRegion '.\Public\Get-PSWeeklyCreator.ps1' 19
 #Region '.\Public\Search-PSWeeklyLink.ps1' -1
 
 <#
