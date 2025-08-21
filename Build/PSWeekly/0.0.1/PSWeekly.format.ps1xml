@@ -1,0 +1,83 @@
+<!-- Generated with EZOut 2.0.6: Install-Module EZOut or https://github.com/StartAutomating/EZOut -->
+<Configuration>
+  <ViewDefinitions>
+    <View>
+      <Name>link_library_links</Name>
+      <ViewSelectedBy>
+        <TypeName>link_library_links</TypeName>
+      </ViewSelectedBy>
+      <GroupBy>
+        <ScriptBlock> $_.GetWeeklyCategoryDisplayName() </ScriptBlock>
+        <Label>Category</Label>
+      </GroupBy>
+      <TableControl>
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Title</Label>
+            <Alignment>left</Alignment>
+            <Width>45</Width>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Author</Label>
+            <Alignment>left</Alignment>
+            <Width>25</Width>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Link</Label>
+            <Alignment>left</Alignment>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <Wrap />
+            <TableColumnItems>
+              <TableColumnItem>
+                <ScriptBlock> "{0}{1}{2}" -f ($PSStyle.Italic+$PSStyle.Foreground.BrightCyan),$_.Title,$PSStyle.Reset </ScriptBlock>
+              </TableColumnItem>
+              <TableColumnItem>
+                <ScriptBlock> $_.Author </ScriptBlock>
+              </TableColumnItem>
+              <TableColumnItem>
+                <ScriptBlock> $_.Link </ScriptBlock>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <Name>link_library_links</Name>
+      <ViewSelectedBy>
+        <TypeName>link_library_links</TypeName>
+      </ViewSelectedBy>
+      <ListControl>
+        <ListEntries>
+          <ListEntry>
+            <ListItems>
+              <ListItem>
+                <Label>Title</Label>
+                <ScriptBlock> $_.Title </ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>Author</Label>
+                <ScriptBlock> $_.Author </ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>WeeklyCategory</Label>
+                <ScriptBlock> $_.GetWeeklyCategoryDisplayName() </ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>Description</Label>
+                <ScriptBlock> $_.Description </ScriptBlock>
+              </ListItem>
+              <ListItem>
+                <Label>Link</Label>
+                <ScriptBlock> $_.Link </ScriptBlock>
+              </ListItem>
+            </ListItems>
+          </ListEntry>
+        </ListEntries>
+      </ListControl>
+    </View>
+  </ViewDefinitions>
+</Configuration>
